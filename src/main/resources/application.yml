@@ -1,11 +1,19 @@
-server:
-    port: 8080
+#server:
+#    port: 8080
 
+#logging:
+#    level:
+#        root: info
 ---
 spring:
     config:
         activate:
             on-profile: local
-logging:
-    level:
-        root: info
+server:
+    tomcat:
+        threads:
+            max: 1
+            min-spare: 1
+        accept-count: 1
+        max-connections: 1
+        connection-timeout: 1000
