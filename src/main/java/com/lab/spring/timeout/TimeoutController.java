@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Slf4j
 @RestController
 @AllArgsConstructor
@@ -17,7 +19,7 @@ public class TimeoutController {
     @GetMapping()
     public void timeout() {
         log.info("테스트 start");
-        restTemplate.getForObject("http://localhost:8081/timeout/conn", Object.class);
+        restTemplate.getForObject("http://10.255.255.1/", Object.class);
         log.info("테스트 end");
     }
 

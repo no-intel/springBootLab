@@ -22,7 +22,7 @@ public class RestTemplateConfig {
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplateBuilder()
-                .setConnectTimeout(Duration.ofSeconds(1))
+                .setConnectTimeout(Duration.ofNanos(1))
                 .setReadTimeout(Duration.ofSeconds(5))
 //                .additionalInterceptors(clientHttpRequestInterceptor())
 //                .requestFactory(()->new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()))
