@@ -23,7 +23,7 @@ public class RestTemplateConfig {
     public RestTemplate restTemplate(){
         return new RestTemplateBuilder()
                 .setConnectTimeout(Duration.ofNanos(1))
-                .setReadTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(30))
 //                .additionalInterceptors(clientHttpRequestInterceptor())
 //                .requestFactory(()->new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()))
                 .build();
